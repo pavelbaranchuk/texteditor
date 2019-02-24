@@ -1,0 +1,29 @@
+#control {
+  background-color: #fff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5px;
+}
+
+#control__wrapper {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.control__button {
+  margin: 3px 10px;
+  padding: 5px;
+  border-radius: 5px;
+  min-width: 50px;
+  font-size: 15px;
+  background: #ffa600b2;
+  cursor: pointer;
+  outline: none;
+}
+
+.control__button:hover {
+  background: #ffa500;
+}
