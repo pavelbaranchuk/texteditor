@@ -1,4 +1,4 @@
-# 🖥 Simple text editor
+# 🖥 Text editor
 
 🚀🚀🚀
 ## Initial setup
