@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import ControlPanel from "./components/control-panel/ControlPanel";
-import FileZone from "./components/file-zone/FileZone";
+import EditorToolbar from "./components/editorToolbar/EditorToolbar";
+import TextEditor from "./components/textEditor/TextEditor";
 import getMockText from "./services/text.service";
 
 class App extends Component {
@@ -14,9 +14,9 @@ class App extends Component {
   }
 
   render() {
-    let file = document.getElementById("file");
-    if (file) {
-      file.contentEditable = "true";
+    let editor = document.getElementsByClassName("textEditor__content")[0];
+    if (editor) {
+      editor.contentEditable = "true";
     }
     
     return (
@@ -25,9 +25,9 @@ class App extends Component {
           <span>Advanced Text Editor by Pavel Baranchuk</span>
         </header>
         <main>
-          <ControlPanel />
-          <span id="synonym" />
-          <FileZone content={this.state.content} />
+          <EditorToolbar />
+          <span className="app__synonym" />
+          <TextEditor content={this.state.content} />
         </main>
         <footer>AgileEngine, 2018</footer>
       </div>

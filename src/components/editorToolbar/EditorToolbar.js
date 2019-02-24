@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import "./ControlPanel.css";
+import "./EditorToolbar.css";
 import { connect } from "react-redux";
 import { loadSynonyms } from "../../store/actionCreators/synonyms";
 
-import { addSynonyms, getSelectionText } from "../../helpers/helpers"
+import { addSynonyms, getSelectedText } from "../../helpers/helpers";
 
-class ControlPanel extends Component {
+class EditorToolbar extends Component {
   render() {
     return (
-      <div id="control">
-        <div id="control__wrapper">
+      <div className="control">
+        <div className="control__wrapper">
           <button
             onClick={this.handleBoldClick}
             className="control__button"
@@ -82,8 +82,8 @@ class ControlPanel extends Component {
   };
 
   handleSynonymClick = () => {
-    let word = getSelectionText();
-    
+    let word = getSelectedText();
+
     addSynonyms([]);
 
     if (word) {
@@ -101,4 +101,4 @@ const mapDispatchToProps = {
 export default connect(
   null,
   mapDispatchToProps
-)(ControlPanel);
+)(EditorToolbar);

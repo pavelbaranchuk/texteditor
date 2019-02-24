@@ -1,6 +1,6 @@
 export function addSynonyms(text) {
   let wholeText = "";
-  let synonym = document.getElementById("synonym");
+  let synonym = document.getElementsByClassName("app__synonym")[0];
   text.map((value, i) => {
     if (i === text.length - 1) {
       wholeText += `${value.word}`;
@@ -15,7 +15,7 @@ export function addSynonyms(text) {
   }
 };
 
-export function getSelectionText() {
+export function getSelectedText() {
   let text = "";
   if (window.getSelection) {
     text = window.getSelection().toString();
